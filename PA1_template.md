@@ -78,7 +78,7 @@ paste("Interval with highest average steps is",high[1,2])
 ## [1] "Interval with highest average steps is 835"
 ```
 ## Imputing missing values
-Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with na). Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
+Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with na). 
 
 ```r
 missingcount<-complete.cases(activity)
@@ -89,12 +89,12 @@ paste(table(missingcount)[1],"rows with missing values")
 ```
 ## [1] "2304 rows with missing values"
 ```
-Create a new dataset that is equal to the original dataset but with the missing data filled in.
+Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc. Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
 ```r
+"I filled in the missing data with the average steps of the entire dataset."
 activityfill<-activity
-activityfill$steps[is.na(activityfill$steps)]<-mean(activity$steps,na.rm=TRUE)
-"I filled in the missing data with the average steps of the entire dataset". 
+activityfill$steps[is.na(activityfill$steps)]<-mean(activity$steps,na.rm=TRUE) 
 ```
 Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
