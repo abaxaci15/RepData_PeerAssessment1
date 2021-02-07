@@ -5,6 +5,7 @@ date: "2/1/2021"
 output:
   html_document: default
   pdf_document: default
+  
 ---
 
 
@@ -67,7 +68,9 @@ int+geom_line(color= "#FF5733", size=1)+labs(title="Average Number of Steps Per 
 ```
 
 ![plot of chunk timeplot ](figure/timeplot -1.png)
-<br> Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
+
+
+Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 ```r
 high<-meaninterval_frame[order(meaninterval_frame$`unlist(meaninterval)`,decreasing = TRUE),]
