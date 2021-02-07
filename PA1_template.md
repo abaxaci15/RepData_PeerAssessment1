@@ -78,11 +78,12 @@ paste("Interval with highest average steps is",high[1,2])
 ## [1] "Interval with highest average steps is 835"
 ```
 ## Imputing missing values
-Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with na)
+Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with na). Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
 ```r
 missingcount<-complete.cases(activity)
 paste(table(missingcount)[1],"rows with missing values")
+"I filled in the missing data with the average steps of the entire dataset". 
 ```
 
 ```
