@@ -66,7 +66,7 @@ int<-ggplot(data=meaninterval_frame, aes(x=as.numeric(interval), y=`unlist(meani
 int+geom_line(color= "#FF5733", size=1)+labs(title="Average Number of Steps Per Time Interval", x="Intervals", y="Average Steps")
 ```
 
-![plot of chunk timeplot ](figure/timeplot -1.png)
+![plot of chunk timeplot ](https://raw.githubusercontent.com/abaxaci15/RepData_PeerAssessment1/master/figure/timeplot%20-1.png)
 <br> Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 ```r
