@@ -83,7 +83,7 @@ Calculate and report the total number of missing values in the dataset (i.e. the
 ```r
 missingcount<-complete.cases(activity)
 paste(table(missingcount)[1],"rows with missing values")
-"I filled in the missing data with the average steps of the entire dataset". 
+
 ```
 
 ```
@@ -94,6 +94,7 @@ Create a new dataset that is equal to the original dataset but with the missing 
 ```r
 activityfill<-activity
 activityfill$steps[is.na(activityfill$steps)]<-mean(activity$steps,na.rm=TRUE)
+"I filled in the missing data with the average steps of the entire dataset". 
 ```
 Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
